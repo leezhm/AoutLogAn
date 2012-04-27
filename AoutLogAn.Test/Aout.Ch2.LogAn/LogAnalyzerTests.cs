@@ -1,5 +1,5 @@
 // 
-// Test.cs
+// LogAnalyzerTests.cs
 //  
 // Author:
 //       Leezhm <leezhm@126.com>
@@ -7,10 +7,10 @@
 // Copyright (c) 2012 leezhm@126.com
 // 
 // Created:
-//       Leezhm <12-4-28 上1:47>
+//       Leezhm <12-4-28 上1:54>
 // 
 // Modified:
-//       Leezhm <12-4-28 上1:47>
+//       Leezhm <12-4-28 上1:54>
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,7 @@ using NUnit.Framework;
 namespace AoutLogAn.Test
 {
 	[TestFixture()]
-	public class Test
+	public class LogAnalyzerTests
 	{
 		[Test()]
 		public void TestCase ()
