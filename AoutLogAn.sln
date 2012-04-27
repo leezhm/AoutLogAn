@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoutLogAn", "AoutLogAn\AoutLogAn.csproj", "{9A3939C9-0979-4B38-AA08-804179482F59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AoutLogAn.Test", "AoutLogAn.Test\AoutLogAn.Test.csproj", "{C7AB36F4-21B6-446F-8927-6037409A6642}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{9A3939C9-0979-4B38-AA08-804179482F59}.Debug|x86.Build.0 = Debug|x86
 		{9A3939C9-0979-4B38-AA08-804179482F59}.Release|x86.ActiveCfg = Release|x86
 		{9A3939C9-0979-4B38-AA08-804179482F59}.Release|x86.Build.0 = Release|x86
+		{C7AB36F4-21B6-446F-8927-6037409A6642}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7AB36F4-21B6-446F-8927-6037409A6642}.Debug|x86.Build.0 = Debug|Any CPU
+		{C7AB36F4-21B6-446F-8927-6037409A6642}.Release|x86.ActiveCfg = Release|Any CPU
+		{C7AB36F4-21B6-446F-8927-6037409A6642}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = AoutLogAn\AoutLogAn.csproj
