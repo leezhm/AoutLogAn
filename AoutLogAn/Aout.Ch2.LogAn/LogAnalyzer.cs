@@ -42,7 +42,7 @@ namespace AoutLogAn
 		{
 		}
 		
-		public void IsValidFileName (string fileName)
+		public bool IsValidLogFileName (string fileName)
 		{
 			if(!fileName.EndsWith(".slf"))
 			{

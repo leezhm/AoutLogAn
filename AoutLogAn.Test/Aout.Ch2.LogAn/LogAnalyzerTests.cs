@@ -37,12 +37,20 @@ using NUnit.Framework;
 
 namespace AoutLogAn.Test
 {
-	[TestFixture()]
+	[TestFixture]
 	public class LogAnalyzerTests
 	{
-		[Test()]
-		public void TestCase ()
+		[Test]
+		public void IsValidFileName_ValidFileLowercase_ReturnTrue ()
 		{
+			// arrange
+			LogAnalyzer analyzer = new LogAnalyzer ();
+			
+			// act
+			bool result = analyzer.IsValidFileName ("whatever.slf");
+			
+			// assert
+			Assert.IsTrue(result, "File should be valid ... ");
 		}
 	}
 }
