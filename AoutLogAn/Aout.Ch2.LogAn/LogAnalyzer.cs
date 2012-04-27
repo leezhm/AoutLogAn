@@ -42,13 +42,39 @@ namespace AoutLogAn
 		{
 		}
 		
+		/// <summary>
+		/// Determines whether this instance is valid log file name the specified fileName.
+		/// </summary>
+		/// <returns>
+		/// <c>true</c> if this instance is valid log file name the specified fileName; otherwise, <c>false</c>.
+		/// </returns>
+		/// <param name='fileName'>
+		/// If set to <c>true</c> file name.
+		/// </param>
 		public bool IsValidLogFileName (string fileName)
 		{
-			if(!fileName.EndsWith(".slf"))
-			{
+			if (!fileName.EndsWith (".slf")) {
 				return false;
 			}
 			
+			return true;
+		}
+		
+		/// <summary>
+		/// Determines whether this instance is exist log file the specified filePath.
+		/// </summary>
+		/// <returns>
+		/// <c>true</c> if this instance is exist log file the specified filePath; otherwise, <c>false</c>.
+		/// </returns>
+		/// <param name='filePath'>
+		/// If set to <c>true</c> file path.
+		/// </param>
+		public bool IsExistLogFile (string filePath)
+		{
+			if (!System.IO.File.Exists (filePath)) {
+				return false;
+			}
+		
 			return true;
 		}
 	}

@@ -41,16 +41,29 @@ namespace AoutLogAn.Test
 	public class LogAnalyzerTests
 	{
 		[Test]
-		public void IsValidFileName_ValidFileLowercase_ReturnTrue ()
+		public void IsValidLogFileName_ValidFileLowercase_ReturnTrue()
+		{
+			// arrange
+			LogAnalyzer analyzer = new LogAnalyzer();
+			
+			// act
+			bool result = analyzer.IsValidLogFileName("whatever.slf");
+			
+			// assert
+			Assert.IsTrue (result, "File should be valid ... ");
+		}
+		
+		[Test]
+		public void IsExistLogFile_ValidFilePath_ReturnTrue ()
 		{
 			// arrange
 			LogAnalyzer analyzer = new LogAnalyzer ();
 			
 			// act
-			bool result = analyzer.IsValidFileName ("whatever.slf");
+			bool result = analyzer.IsExistLogFile ("whatever.slf");
 			
 			// assert
-			Assert.IsTrue(result, "File should be valid ... ");
+			Assert.IsTrue(result, "File should be exist ... ");
 		}
 	}
 }
