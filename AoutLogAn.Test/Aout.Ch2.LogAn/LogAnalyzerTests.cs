@@ -40,14 +40,27 @@ namespace AoutLogAn.Test
 	[TestFixture]
 	public class LogAnalyzerTests
 	{
+		/// <summary>
+		/// Declare a member of variant
+		/// </summary>
+		private LogAnalyzer mAnalyzer = null;
+		[SetUp]
+		public void Setup ()
+		{
+			mAnalyzer = new LogAnalyzer ();
+		}
+		
+		[TearDown]
+		public void TearDown ()
+		{
+			mAnalyzer = null;
+		}
+		
 		[Test]
 		public void IsValidLogFileName_ValidFileLowercase_ReturnTrue()
 		{
-			// arrange
-			LogAnalyzer analyzer = new LogAnalyzer();
-			
 			// act
-			bool result = analyzer.IsValidLogFileName("whatever.slf");
+			bool result = mAnalyzer.IsValidLogFileName("whatever.slf");
 			
 			// assert
 			Assert.IsTrue (result, "File should be valid ... ");
@@ -56,11 +69,8 @@ namespace AoutLogAn.Test
 		[Test]
 		public void IsExistLogFile_ValidFilePath_ReturnTrue ()
 		{
-			// arrange
-			LogAnalyzer analyzer = new LogAnalyzer ();
-			
 			// act
-			bool result = analyzer.IsExistLogFile ("whatever.slf");
+			bool result = mAnalyzer.IsExistLogFile ("whatever.slf");
 			
 			// assert
 			Assert.IsTrue(result, "File should be exist ... ");
