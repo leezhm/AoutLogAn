@@ -67,13 +67,27 @@ namespace AoutLogAn.Test
 		}
 		
 		[Test]
-		public void IsExistLogFile_ValidFilePath_ReturnTrue ()
+		public void IsExistLogFilePath_ValidFilePath_ReturnTrue ()
 		{
 			// act
-			bool result = mAnalyzer.IsExistLogFile ("whatever.slf");
+			bool result = mAnalyzer.IsExistLogFilePath ("whatever.slf");
 			
 			// assert
-			Assert.IsTrue(result, "File should be exist ... ");
+			Assert.IsTrue (result, "File should be exist ... ");
+		}
+		
+		[Test]
+		[ExpectedException(typeof(ArgumentException), ExpectedMessage="No FileName Provided ...")]
+		public void IsValidLogFileName_EmptyFileName_ThrowException ()
+		{
+			mAnalyzer.IsValidLogFileName (string.Empty);
+		}
+		
+		[Test]
+		[ExpectedException(typeof(ArgumentException), ExpectedMessage="No FilePath Provided ...")]
+		public void IsExistLogFilePath_EmptyFilePath_ThrowException()
+		{
+			mAnalyzer.IsExistLogFilePath(string.Empty);
 		}
 	}
 }

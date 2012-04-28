@@ -53,6 +53,10 @@ namespace AoutLogAn
 		/// </param>
 		public bool IsValidLogFileName (string fileName)
 		{
+			if (String.IsNullOrEmpty (fileName)) {
+				throw new ArgumentException("No FileName Provided ...");
+			}
+			
 			if (!fileName.EndsWith (".slf")) {
 				return false;
 			}
@@ -69,8 +73,12 @@ namespace AoutLogAn
 		/// <param name='filePath'>
 		/// If set to <c>true</c> file path.
 		/// </param>
-		public bool IsExistLogFile (string filePath)
+		public bool IsExistLogFilePath (string filePath)
 		{
+			if (String.IsNullOrEmpty (filePath)) {
+				throw new ArgumentException ("No FilePath Provided ...");
+			}
+			
 			if (!System.IO.File.Exists (filePath)) {
 				return false;
 			}
