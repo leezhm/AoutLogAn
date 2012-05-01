@@ -102,6 +102,15 @@ namespace AoutLogAn.Test
 		{
 			
 		}
+		
+		[Test]
+		public void IsValidLogFileName_ValidName_RememberTrue ()
+		{
+			mAnalyzer.IsValidLogFileName ("whatever.slf");
+			
+			// Did not assert with the return value.
+			Assert.IsTrue (mAnalyzer.WasLastFileNameValid);
+		}
 	}
 }
 

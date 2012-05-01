@@ -38,8 +38,15 @@ namespace AoutLogAn
 {
 	public class LogAnalyzer
 	{
+		private bool wasLastFileNameValid = false;
+		
 		public LogAnalyzer ()
 		{
+		}
+		
+		public bool WasLastFileNameValid {
+			get { return wasLastFileNameValid;}
+			set { wasLastFileNameValid = value;}
 		}
 		
 		/// <summary>
@@ -54,13 +61,15 @@ namespace AoutLogAn
 		public bool IsValidLogFileName (string fileName)
 		{
 			if (String.IsNullOrEmpty (fileName)) {
-				throw new ArgumentException("No FileName Provided ...");
+				throw new ArgumentException ("No FileName Provided ...");
 			}
 			
 			if (!fileName.EndsWith (".slf")) {
+				WasLastFileNameValid = false;
 				return false;
 			}
 			
+			WasLastFileNameValid = true;
 			return true;
 		}
 		
