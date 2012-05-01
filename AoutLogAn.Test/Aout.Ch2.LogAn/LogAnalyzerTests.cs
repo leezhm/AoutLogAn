@@ -85,9 +85,22 @@ namespace AoutLogAn.Test
 		
 		[Test]
 		[ExpectedException(typeof(ArgumentException), ExpectedMessage="No FilePath Provided ...")]
-		public void IsExistLogFilePath_EmptyFilePath_ThrowException()
+		public void IsExistLogFilePath_EmptyFilePath_ThrowException ()
 		{
-			mAnalyzer.IsExistLogFilePath(string.Empty);
+			mAnalyzer.IsExistLogFilePath (string.Empty);
+		}
+		
+		[Test]
+		[Ignore("Ignore current test function ...")]
+		public void IgnoreTestingFunction ()
+		{
+		}
+		
+		[Test]
+		[Category("For Learning")]
+		public void ForLearning ()
+		{
+			
 		}
 	}
 }
